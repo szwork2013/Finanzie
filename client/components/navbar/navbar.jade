@@ -11,7 +11,7 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
 
     div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
       ul.nav.navbar-nav
-        li(ng-repeat='item in menu', ng-class='{active: isActive(item.link)}')
+        li(ng-repeat='item in menu', ng-class='{active: isActive(item.link)}', ng-show="isLoggedIn()")
           a(ng-href='{{item.link}}') {{item.title}}
 
         li(ng-show='isAdmin()', ng-class='{active: isActive("/admin")}')
@@ -24,13 +24,13 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
         li(ng-hide='isLoggedIn()', ng-class='{active: isActive("/login")}')
           a(href='/login') Acceso
 
-        li(ng-show='isLoggedIn()')
+        // li(ng-show='isLoggedIn()')
           p.navbar-text Hola {{ getCurrentUser().name }}
 
         li(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
-          a.action(href='/settings')
+          a(href='/settings')
             span.glyphicon.glyphicon-cog
 
         li(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')
-          a.action(href='', ng-click='logout()')
+          a(href='', ng-click='logout()')
             span.glyphicon.glyphicon-log-out

@@ -34,9 +34,10 @@ div{
 .navbar.navbar{
   background: $navbar-bg;
   color: $main-txt;
-  a.action{
-    padding-left: 0;
-  }
+}
+
+.nav > li > a{
+  padding-right: 0;
 }
 
 .navbar .navbar-text{
@@ -95,6 +96,5 @@ input{
 @import 'new-operation/new-operation.scss';
 @import 'operations/operations.scss';
 @import 'products/products.scss';
-@import 'users/users.scss';
 @import 'modal/modal.scss';
 // endinjector

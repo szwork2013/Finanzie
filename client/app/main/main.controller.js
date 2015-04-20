@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('finanzieApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, $location, userService) {
+
+    userService.publicPage();
+
+    /*
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
@@ -24,4 +28,6 @@ angular.module('finanzieApp')
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');
     });
+    */
+
   });
