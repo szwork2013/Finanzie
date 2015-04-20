@@ -3,6 +3,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
+@import 'variables';
+@import 'mixins';
 
 /**
  * App-wide Styles
@@ -15,8 +17,59 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+html,body{
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $main-bg;
+}
+
+div{
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Material Design */
+
+.navbar.navbar{
+  background: $navbar-bg;
+  color: $main-txt;
+}
+
+.panel{
+  @include border-radius(0);
+}
+
+.panel > .panel-heading,.panel > .panel-footer, .panel > .panel-body{
+  background-color: $box-bg;
+}
+
+.panel-heading{
+  border-bottom: $box-border;
+}
+
+.logincard{
+  margin: 60px auto;
+  text-align: center;
+
+  hr{
+    margin: 20px 0;
+  }
+}
+
+
+/* Brand */
+
+.login-logo{
+  background-image: url("../assets/images/amplifon-banner.png");
+  background-size: contain;
+  height: 60px;
+}
+
 // Component styles are injected through grunt
 // injector
+@import '_mixins.scss';
+@import '_variables.scss';
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';

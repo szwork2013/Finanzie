@@ -16,15 +16,34 @@ $btnGithubBackgroundHighlight:      #ccc;
 // Social buttons
 // --------------------------------------------------
 
+.btn-facebook,.btn-twitter,.btn-google-plus,.btn-github{
+  padding-top: 11px !important;
+  color: $btnText !important;
+  border: none !important;
+}
+
 .btn-facebook {
-  @include button-variant($btnText, $btnFacebookBackgroundHighlight, $btnFacebookBackgroundHighlight);
+  background-color: $btnFacebookBackground !important;
+  &:hover{
+    background-color: $btnFacebookBackgroundHighlight !important;
+  }
 }
 .btn-twitter {
-  @include button-variant($btnText, $btnTwitterBackground, $btnTwitterBackgroundHighlight);
+  background-color: $btnTwitterBackground !important;
+  &:hover{
+    background-color: $btnTwitterBackgroundHighlight !important;
+  }
 }
 .btn-google-plus {
-  @include button-variant($btnText, $btnGooglePlusBackground, $btnGooglePlusBackgroundHighlight);
+  background-color: $btnGooglePlusBackground !important;
+  &:hover{
+    background-color: $btnGooglePlusBackgroundHighlight !important;
+  }
 }
 .btn-github {
-  @include button-variant($btnTextAlt, $btnGithubBackground, $btnGithubBackgroundHighlight);
+  color: $btnTextAlt !important;
+  background-color: $btnGithubBackground !important;
+  &:hover{
+    background-color: $btnGithubBackgroundHighlight !important;
+  }
 }
