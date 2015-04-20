@@ -35,6 +35,10 @@ div{
 
 /* Material Design */
 
+select.form-control,input.form-control,select.form-control:focus,input.form-control:focus{
+  height: 36px;
+}
+
 .navbar.navbar{
   background: $navbar-bg;
   color: $main-txt;
@@ -59,7 +63,7 @@ div{
   margin: 15px;
 }
 
-input{
+input.form-control{
   padding: 6px 12px !important;
 }
 
@@ -93,7 +97,35 @@ input{
   margin-top: 60px;
   input{
     margin-top: 10px;
+  }
+  input, input:focus{
     height: 36px;
+  }
+}
+
+.newform {
+  margin-top: 70px;
+  margin-bottom: 60px;
+
+  h3{
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .panel{
+    border: $box-border;
+  }
+
+  label{
+    background-color: $box-bg;
+    color: $main-txt;
+  }
+  .panel-body{
+    padding: 30px 15px 15px;
+    .btn{
+      float: right;
+      margin: 0 0 0 10px;
+    }
   }
 }
 

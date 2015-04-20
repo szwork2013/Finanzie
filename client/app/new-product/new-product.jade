@@ -1,2 +1,43 @@
-.col-md-12
-    | This is the new-product view.
+div(ng-include='"components/navbar/navbar.html"')
+
+.container.newform
+  .row
+    .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+      .panel
+        .panel-heading
+          h3 Nuevo Producto Financiero
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-sm-3.control-label(for="term") Plazo
+              .col-sm-9
+                input#term.form-control(type="number", placeholder="Plazo (meses)")
+            .form-group
+              label.col-sm-3.control-label(for="interest") Interés
+              .col-sm-9
+                input#interest.form-control(type="number", placeholder="Tipo de interés anual")
+            .form-group
+              label.col-sm-3.control-label(for="commission") Comisión
+              .col-sm-9
+                input#commission.form-control(type="number", placeholder="Comisión de apertura")
+            .form-group
+              label.col-sm-3.control-label(for="discount") Descuento
+              .col-sm-9
+                input#discount.form-control(type="number", placeholder="Descuento")
+            .form-group
+              label.col-sm-3.control-label(for="entities") Entidades
+              .col-sm-9
+                .checkbox
+                  label Fracciona
+                    input(type="checkbox")
+                .checkbox
+                  label Popular SerFin
+                    input(type="checkbox")
+                .checkbox
+                  label Cetelem
+                    input(type="checkbox")
+
+            .form-group
+                    .col-xs-12
+                      button.btn.btn-danger Guardar
+                      button.btn.btn-default Cancelar
