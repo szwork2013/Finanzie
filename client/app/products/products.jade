@@ -1,1 +1,14 @@
 div(ng-include='"components/navbar/navbar.html"')
+.container.searchbar
+  .row
+    .form-group.col-sm-8.col-md-9.col-lg-10
+      input.form-control(placeholder="Busca entre tus productos",ng-model="searchform")
+    .col-sm-4.col-md-3.col-lg-2
+      button.btn.btn-block.btn-success(type="button",ng-click="showNew()") NUEVO PRODUCTO
+
+.container.searchlist
+  .row
+    .col-sm-6.col-md-4
+      .panel
+        .panel-body
+          p Producto 1

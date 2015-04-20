@@ -34,10 +34,21 @@ div{
 .navbar.navbar{
   background: $navbar-bg;
   color: $main-txt;
+  .btn{
+    margin:0;
+  }
+}
+
+.navbar .navbar-nav > li > a{
+  padding-top: 20px;
 }
 
 .nav > li > a{
   padding-right: 0;
+  &.action{
+    padding-left: 0;
+    padding-right: 15px;
+  }
 }
 
 .navbar .navbar-text{
@@ -69,6 +80,18 @@ input{
   }
 }
 
+.searchbar{
+  margin-top: 60px;
+  input{
+    margin-top: 10px;
+    height: 36px;
+  }
+}
+
+.searchlist{
+  margin-top: 30px;
+}
+
 
 /* Brand */
 
@@ -77,7 +100,7 @@ input{
   background-size: contain;
   width: 40px;
   height: 40px;
-  margin-top: 5px;
+  margin: 10px 0;
 }
 
 .login-logo{
