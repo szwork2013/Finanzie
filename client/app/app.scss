@@ -126,12 +126,19 @@ input{
 .operationlist{
   .panel{
     border: $box-border;
+    margin-bottom: 15px;
   }
   p{
     font-size: 14px;
     margin-bottom: 0;
     span{
       color: $home-primary;
+    }
+  }
+  .denied > .panel-heading,.denied > .panel-footer, .denied > .panel-body{
+    background-color: $main-bg;
+    p span{
+      color: $brand-amplifon;
     }
   }
 }
@@ -199,7 +206,7 @@ input{
 }
 
 .btn-danger:not(.btn-link):not(.btn-flat){
-  background-color: #da0000;
+  background-color: $brand-amplifon;
 }
 
 // Component styles are injected through grunt

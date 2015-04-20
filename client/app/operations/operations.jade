@@ -3,7 +3,7 @@ div(ng-include='"components/navbar/navbar.html"')
 .container.searchbar
   .row
     .form-group.col-sm-8.col-md-9.col-lg-10
-      input.form-control(placeholder="Busca entre tus operaciones",ng-model="searchform")
+      input.form-control(placeholder="Busca entre las operaciones",ng-model="searchform")
     .col-sm-4.col-md-3.col-lg-2
       button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVA OPERACIÓN
 
@@ -16,23 +16,22 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-md-4
               p
-                b Implantación Audífono Intracanal (ITC)
-              p Javier Martínez Yagüe - 01185428D
+                b Implantación Audífono ITC
+              p Mª Isabel Castillo Ribera - 011233832A
             .col-md-2
-              p 20-04-2015
+              p 21-04-2015
             .col-md-2
-              p 0% - 12 meses
+              p 6% - 24 meses
             .col-md-2
-              p.alright Pendiente
+              p.alright Borrador
             .col-md-2
               p.alright
-                span 9.000,00€
-
+                span 8.200,00€
         .panel-footer
           .row
-            .col-xs-6
-              p C/ Seseña, 72 (Madrid)
-            .col-xs-6
+            .col-xs-7
+              p C/ Mayor, 21 (Alcorcón)
+            .col-xs-5
               .click(ng-click="delete(record)")
                 span.glyphicon.glyphicon-trash
               .click(ng-click="edit(record)")
@@ -40,3 +39,117 @@ div(ng-include='"components/navbar/navbar.html"')
               .click(ng-click="view(record)")
                 span.glyphicon.glyphicon-eye-open
 
+    .col-xs-12
+      .panel
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b Implantación Audífono ITC
+              p Danilo Márquez Carreras - X23494432
+            .col-md-2
+              p 21-04-2015
+            .col-md-2
+              p 0% - 12 meses
+            .col-md-2
+              p.alright En curso
+            .col-md-2
+              p.alright
+                span 9.000,00€
+        .panel-footer
+          .row
+            .col-xs-7
+              p C/ Seseña, 72 (Madrid)
+            .col-xs-5
+              .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-remove
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
+
+    .col-xs-12
+      .panel.denied
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b Implantación Audífono RITE
+              p Edgar Santos Castaneda - X23494432
+            .col-md-2
+              p 20-04-2015
+            .col-md-2
+              p 6% - 36 meses
+            .col-md-2
+              p.alright Denegada
+            .col-md-2
+              p.alright
+                span 8.600,00€
+        .panel-footer
+          .row
+            .col-xs-7
+              p C/ Mayor, 21 (Alcorcón)
+            .col-xs-5
+              .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-save
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
+
+
+    .col-xs-12
+      .panel
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b Implantación Audífono RITE
+              p Javier Martínez Yagüe - X23354321
+            .col-md-2
+              p 20-04-2015
+            .col-md-2
+              p 0% - 12 meses
+            .col-md-2
+              p.alright Fracciona
+            .col-md-2
+              p.alright
+                span 8.200,00€
+
+        .panel-footer
+          .row
+            .col-xs-7
+              p C/ Seseña, 72 (Madrid)
+            .col-xs-5
+              // .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-save
+              .click(ng-click="download(record)")
+                span.glyphicon.glyphicon-file
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
+
+
+    .col-xs-12
+      .panel
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b Implantación Audífono ITC
+              p Isabel Solans Calvo - 32209123A
+            .col-md-2
+              p 20-04-2015
+            .col-md-2
+              p 6% - 24 meses
+            .col-md-2
+              p.alright Popular SerFin
+            .col-md-2
+              p.alright
+                span 8.500,00€
+        .panel-footer
+          .row
+            .col-xs-7
+              p C/ Seseña, 72 (Madrid)
+            .col-xs-5
+              // .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-save
+              .click(ng-click="download(record)")
+                span.glyphicon.glyphicon-file
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
