@@ -3,17 +3,6 @@
 angular.module('finanzieApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
 
-    $scope.menu = [
-      {
-        'title': 'Operaciones',
-        'link': '/operations'
-      },
-      {
-        'title': 'Productos',
-        'link': '/products'
-      }
-    ];
-
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
