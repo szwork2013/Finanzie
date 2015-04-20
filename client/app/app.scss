@@ -63,6 +63,11 @@ input{
   @include border-radius(0);
 }
 
+.panel-50{
+  width: 50%;
+  float: left;
+}
+
 .panel > .panel-heading,.panel > .panel-footer, .panel > .panel-body{
   background-color: $box-bg;
 }
@@ -92,6 +97,67 @@ input{
   margin-top: 30px;
 }
 
+.productlist{
+  .panel{
+    height: auto;
+    overflow: hidden;
+    border: $box-border;
+    text-align: center;
+  }
+
+  .panel-heading{
+    padding: 0 15px;
+  }
+
+  .panel-body{
+    padding: 0;
+    background-color: $main-bg;
+    color: $light-txt;
+  }
+
+  .panel-footer{
+    padding: 0;
+    text-align: right;
+    border-top: $box-border;
+    span.glyphicon{
+      float: right;
+      border-left: $box-border;
+      color: #aaa;
+      padding: 7px;
+      margin-top: -1px;
+    }
+    span.glyphicon:hover{
+      cursor: pointer;
+      background-color: $main-bg;
+    }
+  }
+
+  .left, .right{
+    padding: 5px 15px;
+  }
+
+  .right{
+    border-left: $box-border;
+  }
+
+  p{
+    margin: 0;
+  }
+
+  .term{
+    font-size: 20px;
+    span{
+      font-size: 52px;
+    }
+  }
+  .interest, .discount{
+    font-size: 14px;
+    span{
+      font-size: 20px;
+    }
+  }
+}
+
 
 /* Brand */
 
@@ -107,6 +173,10 @@ input{
   background-image: url("../assets/images/amplifon-banner.png");
   background-size: contain;
   height: 60px;
+}
+
+.btn-danger:not(.btn-link):not(.btn-flat){
+  background-color: #da0000;
 }
 
 // Component styles are injected through grunt

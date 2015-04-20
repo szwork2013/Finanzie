@@ -4,11 +4,102 @@ div(ng-include='"components/navbar/navbar.html"')
     .form-group.col-sm-8.col-md-9.col-lg-10
       input.form-control(placeholder="Busca entre tus productos",ng-model="searchform")
     .col-sm-4.col-md-3.col-lg-2
-      button.btn.btn-block.btn-success(type="button",ng-click="showNew()") NUEVO PRODUCTO
+      button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVO PRODUCTO
 
-.container.searchlist
+.container.searchlist.productlist
   .row
-    .col-sm-6.col-md-4
+
+    .col-sm-6.col-md-4.col-lg-3
       .panel
+        .panel-heading
+          p.term <span>36</span> meses
+
         .panel-body
-          p Producto 1
+          .panel-50.left
+            p.interest <span>6%</span> interés
+          .panel-50.right
+            p.discount <span>2%</span> descuento
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          p.term <span>24</span> meses
+
+        .panel-body
+          .panel-50.left
+            p.interest <span>5%</span> interés
+          .panel-50.right
+            p.discount <span>1.5%</span> descuento
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          p.term <span>12</span> meses
+
+        .panel-body
+          .panel-50.left
+            p.interest <span>4%</span> interés
+          .panel-50.right
+            p.discount <span>1%</span> descuento
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          p.term <span>24</span> meses
+
+        .panel-body
+          .panel-50.left
+            p.interest <span>0%</span> interés
+          .panel-50.right
+            p.discount <span>2%</span> comisión
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          p.term <span>12</span> meses
+
+        .panel-body
+          .panel-50.left
+            p.interest <span>0%</span> interés
+          .panel-50.right
+            p.discount <span>4%</span> comisión
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil

@@ -21,7 +21,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p.help-block {{ errors.other }}
 
             div
-              button.btn.btn-block.btn-success.btn-login(type='submit')
+              button.btn.btn-block.btn-danger.btn-login(type='submit')
                 | acceder
 
             hr
@@ -30,8 +30,8 @@ div(ng-include='"components/navbar/navbar.html"')
               a.btn.btn-block.btn-facebook(href='', ng-click='loginOauth("facebook")')
                 i.fa.fa-facebook
                 |  Conecta con Facebook
-              = ' '
-              a.btn.btn-block.btn-google-plus(href='', ng-click='loginOauth("google")')
+              // = ' '
+              // a.btn.btn-block.btn-google-plus(href='', ng-click='loginOauth("google")')
                 i.fa.fa-google-plus
                 |  Conecta con Google+
               = ' '
