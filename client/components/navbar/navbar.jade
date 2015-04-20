@@ -28,8 +28,9 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
           p.navbar-text Hola {{ getCurrentUser().name }}
 
         li(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
-          a(href='/settings')
+          a.action(href='/settings')
             span.glyphicon.glyphicon-cog
 
         li(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')
-          a(href='', ng-click='logout()') Desconexión
+          a.action(href='', ng-click='logout()')
+            span.glyphicon.glyphicon-log-out

@@ -34,10 +34,17 @@ div{
 .navbar.navbar{
   background: $navbar-bg;
   color: $main-txt;
+  a.action{
+    padding-left: 0;
+  }
 }
 
 .navbar .navbar-text{
   margin: 15px;
+}
+
+input{
+  padding: 6px 12px !important;
 }
 
 .panel{
