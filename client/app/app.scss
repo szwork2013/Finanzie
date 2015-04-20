@@ -33,6 +33,10 @@ div{
   text-align: right;
 }
 
+.nomar{
+  margin: 0;
+}
+
 /* Material Design */
 
 select.form-control,input.form-control,select.form-control:focus,input.form-control:focus{
@@ -121,7 +125,7 @@ input.form-control{
     color: $main-txt;
   }
   .panel-body{
-    padding: 30px 15px 15px;
+    padding: 20px 15px;
     .btn{
       float: right;
       margin: 10px 0 0 10px;
