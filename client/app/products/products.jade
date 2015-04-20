@@ -16,7 +16,7 @@ div(ng-include='"components/navbar/navbar.html"')
 
         .panel-body
           .panel-50.left
-            p.interest <span>6%</span> interés
+            p.interest <span>4%</span> interés
           .panel-50.right
             p.discount <span>2%</span> descuento
 
@@ -54,9 +54,28 @@ div(ng-include='"components/navbar/navbar.html"')
 
         .panel-body
           .panel-50.left
-            p.interest <span>4%</span> interés
+            p.interest <span>6%</span> interés
           .panel-50.right
             p.discount <span>1%</span> descuento
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          p.term <span>36</span> meses
+
+        .panel-body
+          .panel-50.left
+            p.interest <span>0%</span> interés
+          .panel-50.right
+            p.discount <span>4%</span> comisión
 
         .panel-footer
           .row
@@ -75,7 +94,7 @@ div(ng-include='"components/navbar/navbar.html"')
           .panel-50.left
             p.interest <span>0%</span> interés
           .panel-50.right
-            p.discount <span>2%</span> comisión
+            p.discount <span>3%</span> comisión
 
         .panel-footer
           .row
@@ -94,7 +113,7 @@ div(ng-include='"components/navbar/navbar.html"')
           .panel-50.left
             p.interest <span>0%</span> interés
           .panel-50.right
-            p.discount <span>4%</span> comisión
+            p.discount <span>2%</span> comisión
 
         .panel-footer
           .row
