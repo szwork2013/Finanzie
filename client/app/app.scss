@@ -29,6 +29,10 @@ div{
   background-position: center center;
 }
 
+.alright{
+  text-align: right;
+}
+
 /* Material Design */
 
 .navbar.navbar{
@@ -96,6 +100,40 @@ input{
 .searchlist{
   margin-top: 30px;
   margin-bottom: 60px;
+
+  .panel-footer{
+    padding: 0;
+    border-top: $box-border;
+    p{
+      font-size: 12px;
+      color: $light-txt;
+      padding: 6px 15px 0;
+    }
+    span.glyphicon{
+      float: right;
+      border-left: $box-border;
+      color: #aaa;
+      padding: 8px;
+      margin-top: -1px;
+    }
+    span.glyphicon:hover{
+      cursor: pointer;
+      background-color: $main-bg;
+    }
+  }
+}
+
+.operationlist{
+  .panel{
+    border: $box-border;
+  }
+  p{
+    font-size: 14px;
+    margin-bottom: 0;
+    span{
+      color: $home-primary;
+    }
+  }
 }
 
 .productlist{
@@ -114,23 +152,6 @@ input{
     padding: 0;
     background-color: $main-bg;
     color: $light-txt;
-  }
-
-  .panel-footer{
-    padding: 0;
-    text-align: right;
-    border-top: $box-border;
-    span.glyphicon{
-      float: right;
-      border-left: $box-border;
-      color: #aaa;
-      padding: 8px;
-      margin-top: -1px;
-    }
-    span.glyphicon:hover{
-      cursor: pointer;
-      background-color: $main-bg;
-    }
   }
 
   .left, .right{

@@ -7,3 +7,36 @@ div(ng-include='"components/navbar/navbar.html"')
     .col-sm-4.col-md-3.col-lg-2
       button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVA OPERACIÓN
 
+.container.searchlist.operationlist
+  .row
+
+    .col-xs-12
+      .panel
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b Implantación Audífono Intracanal (ITC)
+              p Javier Martínez Yagüe - 01185428D
+            .col-md-2
+              p 20-04-2015
+            .col-md-2
+              p 0% - 12 meses
+            .col-md-2
+              p.alright Pendiente
+            .col-md-2
+              p.alright
+                span 9.000,00€
+
+        .panel-footer
+          .row
+            .col-xs-6
+              p C/ Seseña, 72 (Madrid)
+            .col-xs-6
+              .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record)")
+                span.glyphicon.glyphicon-pencil
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
+
