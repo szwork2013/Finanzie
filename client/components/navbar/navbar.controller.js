@@ -2,8 +2,9 @@
 
 angular.module('finanzieApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
+
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'Inicio',
       'link': '/'
     }];
 
