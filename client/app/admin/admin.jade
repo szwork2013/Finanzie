@@ -22,18 +22,186 @@ div(ng-include='"components/navbar/navbar.html"')
               p asantos@amplifon.es
 
         .panel-body
-          .panel-50.left
-            p.interest <span>4%</span> interés
-          .panel-50.right
-            p.discount <span>2%</span> descuento
+          .row
+            .col-xs-4
+              p
+                b Centro:
+            .col-xs-8
+              p C/ Mayor, 21 (Alcorcón)
+          .row
+            .col-xs-4
+              p
+                b Operaciones:
+            .col-xs-8
+              p 24
+          .row
+            .col-xs-4
+              p
+                b Autorizadas:
+            .col-xs-8
+              p 84%
+          .row
+            .col-xs-4
+              p.nomar
+                b Volumen:
+            .col-xs-8
+              p.nomar
+                span 196.100€
 
         .panel-footer
           .row
             .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
+              .click(ng-click="deleteUser(record)")
                 span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
+              .click(ng-click="deactivateUser(record)")
+                span.glyphicon.glyphicon-ban-circle
+              .click(ng-click="editUser(record)")
                 span.glyphicon.glyphicon-pencil
+
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          .row
+            .col-xs-4
+              .img-circle
+                img.img(src="../assets/images/user-3.jpg",alt="Marco Barrios")
+            .col-xs-8
+              h4 Marco Barrios
+              p mbarrios@amplifon.es
+        .panel-body
+          .row
+            .col-xs-4
+              p
+                b Centro:
+            .col-xs-8
+              p C/ Seseña, 72 (Madrid)
+          .row
+            .col-xs-4
+              p
+                b Operaciones:
+            .col-xs-8
+              p 21
+          .row
+            .col-xs-4
+              p
+                b Autorizadas:
+            .col-xs-8
+              p 90%
+          .row
+            .col-xs-4
+              p.nomar
+                b Volumen:
+            .col-xs-8
+              p.nomar
+                span 172.500€
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteUser(record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="deactivateUser(record)")
+                span.glyphicon.glyphicon-ban-circle
+              .click(ng-click="editUser(record)")
+                span.glyphicon.glyphicon-pencil
+
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          .row
+            .col-xs-4
+              .img-circle
+                img.img(src="../assets/images/user-2.jpg",alt="Elena Álvarez")
+            .col-xs-8
+              h4 Elena Álvarez
+              p ealvarez@amplifon.es
+
+        .panel-body
+          .row
+            .col-xs-4
+              p
+                b Centro:
+            .col-xs-8
+              p C/ Mayor, 21 (Alcorcón)
+          .row
+            .col-xs-4
+              p
+                b Operaciones:
+            .col-xs-8
+              p 18
+          .row
+            .col-xs-4
+              p
+                b Autorizadas:
+            .col-xs-8
+              p 88%
+          .row
+            .col-xs-4
+              p.nomar
+                b Volumen:
+            .col-xs-8
+              p.nomar
+                span 152.800€
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteUser(record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="deactivateUser(record)")
+                span.glyphicon.glyphicon-ban-circle
+              .click(ng-click="editUser(record)")
+                span.glyphicon.glyphicon-pencil
+
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          .row
+            .col-xs-4
+              .img-circle
+                img.img(src="../assets/images/user-4.jpg",alt="Andrés Tejero")
+            .col-xs-8
+              h4 Andrés Tejero
+              p atejero@amplifon.es
+        .panel-body
+          .row
+            .col-xs-4
+              p
+                b Centro:
+            .col-xs-8
+              p C/ Seseña, 72 (Madrid)
+          .row
+            .col-xs-4
+              p
+                b Operaciones:
+            .col-xs-8
+              p 28
+          .row
+            .col-xs-4
+              p
+                b Autorizadas:
+            .col-xs-8
+              p 88%
+          .row
+            .col-xs-4
+              p.nomar
+                b Volumen:
+            .col-xs-8
+              p.nomar
+                span 224.900€
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteUser(record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="deactivateUser(record)")
+                span.glyphicon.glyphicon-ban-circle
+              .click(ng-click="editUser(record)")
+                span.glyphicon.glyphicon-pencil
+
 
 // .container
   p

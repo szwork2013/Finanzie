@@ -37,6 +37,10 @@ div{
   margin: 0;
 }
 
+p.nomar{
+  margin: 0 !important;
+}
+
 /* Material Design */
 
 select.form-control,input.form-control,select.form-control:focus,input.form-control:focus{
@@ -259,10 +263,19 @@ input.form-control{
       // border: 2px solid $brand-amplifon;
     }
     h4{
-      margin-bottom: 0;
+      margin: 15px 0 0;
     }
     p{
       color: $brand-amplifon;
+    }
+  }
+  .panel-body{
+    p{
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+    span{
+      color: $home-primary;
     }
   }
 }
