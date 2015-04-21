@@ -6,7 +6,9 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a(href='/')
+      a(href='/admin',ng-show="isLoggedIn()")
+        .navbar-logo
+      a(href='/',ng-hide="isLoggedIn()")
         .navbar-logo
 
     div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')

@@ -33,6 +33,10 @@ div{
   text-align: right;
 }
 
+.mbot-15{
+  margin-bottom: 15px;
+}
+
 .nomar{
   margin: 0;
 }
@@ -291,6 +295,14 @@ input[type="file"].form-control{
   }
 }
 
+.progress,.progress-bar{
+  height: 24px;
+}
+
+.progress-bar{
+  padding: 2px 0;
+}
+
 
 /* Brand */
 
@@ -299,7 +311,7 @@ input[type="file"].form-control{
   background-size: contain;
   width: 40px;
   height: 40px;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 .login-logo{
