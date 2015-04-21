@@ -1,0 +1,33 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+.container.newform
+  .row
+    .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+      .panel
+        .panel-heading
+          h3 Nuevo Usuario
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-sm-4.control-label(for="name") Nombre
+              .col-sm-8
+                input#name.form-control(type="text", placeholder="Nombre y Apellidos")
+            .form-group
+              label.col-sm-4.control-label(for="email") e-mail
+              .col-sm-8
+                input#email.form-control(type="email", placeholder="e-mail de acceso")
+            .form-group
+              label.col-sm-4.control-label(for="center") Centro
+              .col-sm-8
+                select#center.form-control
+                  option(value="alcorcon") Alcorcón
+                  option(value="madrid") Madrid
+            .form-group
+              label.col-sm-4.control-label(for="avatar") Imagen
+              .col-sm-8
+                input#avatar.form-control(type="file")
+
+            .form-group.nomar
+                    .col-xs-12
+                      button.btn.btn-danger(ng-click="back()") Guardar
+                      button.btn.btn-default(ng-click="back()") Cancelar

@@ -75,6 +75,17 @@ input.form-control{
   padding: 6px 12px !important;
 }
 
+select.form-control{
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+input[type="file"].form-control{
+  padding: 7px 0 !important;
+  border: none;
+  box-shadow: none;
+}
+
 .panel{
   @include border-radius(0);
 }
@@ -310,7 +321,9 @@ input.form-control{
 @import 'main/main.scss';
 @import 'new-operation/new-operation.scss';
 @import 'new-product/new-product.scss';
+@import 'new-user/new-user.scss';
 @import 'operations/operations.scss';
 @import 'products/products.scss';
+@import 'users/users.scss';
 @import 'modal/modal.scss';
 // endinjector

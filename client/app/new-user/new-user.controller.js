@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('finanzieApp')
-  .controller('NewProductCtrl', function ($scope, $location, userService) {
+  .controller('NewUserCtrl', function ($scope, $location, userService) {
     userService.adminPage();
 
     $scope.back = function () {
-      $location.url('products');
+      $location.url('users');
     };
-
   });
