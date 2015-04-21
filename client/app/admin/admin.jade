@@ -202,6 +202,52 @@ div(ng-include='"components/navbar/navbar.html"')
               .click(ng-click="editUser(record)")
                 span.glyphicon.glyphicon-pencil
 
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          .row
+            .col-xs-4
+              .img-circle
+                img.img(src="../assets/images/user-5.jpg",alt="Manuel Castán")
+            .col-xs-8
+              h4 Manuel Castán
+              p mcastan@amplifon.es
+        .panel-body
+          .row
+            .col-xs-4
+              p
+                b Centro:
+            .col-xs-8
+              p C/ Mayor, 21 (Alcorcón)
+          .row
+            .col-xs-4
+              p
+                b Operaciones:
+            .col-xs-8
+              p 16
+          .row
+            .col-xs-4
+              p
+                b Autorizadas:
+            .col-xs-8
+              p 90%
+          .row
+            .col-xs-4
+              p.nomar
+                b Volumen:
+            .col-xs-8
+              p.nomar
+                span 134.700€
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteUser(record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="deactivateUser(record)")
+                span.glyphicon.glyphicon-ban-circle
+              .click(ng-click="editUser(record)")
+                span.glyphicon.glyphicon-pencil
+
 
 // .container
   p
