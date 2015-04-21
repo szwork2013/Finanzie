@@ -1,5 +1,41 @@
 div(ng-include='"components/navbar/navbar.html"')
-.container
+
+.container.searchbar
+  .row
+    .form-group.col-sm-8.col-md-9.col-lg-10
+      input.form-control(placeholder="Busca entre los usuarios",ng-model="searchform")
+    .col-sm-4.col-md-3.col-lg-2
+      button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVO USUARIO
+
+.container.searchlist.userlist
+  .row
+
+    .col-sm-6.col-md-4.col-lg-3
+      .panel
+        .panel-heading
+          .row
+            .col-xs-4
+              .img-circle
+                img.img(src="../assets/images/user-1.jpg",alt="Andrea Santos")
+            .col-xs-8
+              h4 Andrea Santos
+              p asantos@amplifon.es
+
+        .panel-body
+          .panel-50.left
+            p.interest <span>4%</span> interés
+          .panel-50.right
+            p.discount <span>2%</span> descuento
+
+        .panel-footer
+          .row
+            .col-xs-12
+              .click(ng-click="deleteProduct(record.name,record)")
+                span.glyphicon.glyphicon-trash
+              .click(ng-click="edit(record);")
+                span.glyphicon.glyphicon-pencil
+
+// .container
   p
     | The delete user and user index api routes are restricted to users with the 'admin' role.
   ul.list-group

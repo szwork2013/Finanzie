@@ -242,6 +242,31 @@ input.form-control{
   }
 }
 
+.userlist{
+  .panel-heading{
+    .img-circle{
+      // background-color: $main-bg;
+      background-color: #eee;
+      width: 70px;
+      height: 70px;
+      @include border-radius(35px);
+      padding: 3px;
+    }
+    .img{
+      width: 64px;
+      height: 64px;
+      @include border-radius(32px);
+      // border: 2px solid $brand-amplifon;
+    }
+    h4{
+      margin-bottom: 0;
+    }
+    p{
+      color: $brand-amplifon;
+    }
+  }
+}
+
 
 /* Brand */
 
