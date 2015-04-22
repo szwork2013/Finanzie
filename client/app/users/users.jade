@@ -3,9 +3,9 @@ div(ng-include='"components/navbar/navbar.html"')
 .container.searchbar
   .row
     .form-group.col-sm-8.col-md-9.col-lg-10
-      input.form-control(placeholder="Busca entre los usuarios",ng-model="searchform")
+      input.form-control(placeholder="Busca entre los centros",ng-model="searchform")
     .col-sm-4.col-md-3.col-lg-2
-      button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVO USUARIO
+      button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVO CENTRO
 
 .container.searchlist.userlist
   .row
@@ -16,7 +16,8 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-xs-4
               .img-circle
-                img.img(src="../assets/images/user-1.jpg",alt="Andrea Santos")
+                // img.img(src="../assets/images/user-1.jpg",alt="Andrea Santos")
+                .glyphicon.glyphicon-record
             .col-xs-8
               h4 Coslada
               p coslada@amplifon.es
@@ -65,7 +66,8 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-xs-4
               .img-circle
-                img.img(src="../assets/images/user-3.jpg",alt="Marco Barrios")
+                // img.img(src="../assets/images/user-3.jpg",alt="Marco Barrios")
+                .glyphicon.glyphicon-record
             .col-xs-8
               h4 Fuenlabrada
               p fuenlabrada@amplifon.es
@@ -75,7 +77,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p
                 b Centro:
             .col-xs-8
-              p C/ Leganés, 21 (Madrid)
+              p C/ Leganés, 21 (Fuenlabrada)
           .row
             .col-xs-4
               p
@@ -113,7 +115,8 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-xs-4
               .img-circle
-                img.img(src="../assets/images/user-2.jpg",alt="Elena Álvarez")
+                // img.img(src="../assets/images/user-2.jpg",alt="Elena Álvarez")
+                .glyphicon.glyphicon-record
             .col-xs-8
               h4 Alcorcón
               p alcorcon@amplifon.es
@@ -162,7 +165,8 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-xs-4
               .img-circle
-                img.img(src="../assets/images/user-4.jpg",alt="Andrés Tejero")
+                // img.img(src="../assets/images/user-4.jpg",alt="Andrés Tejero")
+                .glyphicon.glyphicon-record
             .col-xs-8
               h4 Madrid
               p madrid@amplifon.es
@@ -208,7 +212,8 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-xs-4
               .img-circle
-                img.img(src="../assets/images/user-5.jpg",alt="Manuel Castán")
+                // img.img(src="../assets/images/user-5.jpg",alt="Manuel Castán")
+                .glyphicon.glyphicon-record
             .col-xs-8
               h4 Móstoles
               p mostoles@amplifon.es
@@ -218,7 +223,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p
                 b Centro:
             .col-xs-8
-              p Av. Constitución, 2 (Alcorcón)
+              p Av. Constitución, 2 (Móstoles)
           .row
             .col-xs-4
               p

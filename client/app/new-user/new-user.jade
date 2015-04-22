@@ -5,24 +5,36 @@ div(ng-include='"components/navbar/navbar.html"')
     .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
       .panel
         .panel-heading
-          h3 Nuevo Usuario
+          h3 Nuevo Centro
         .panel-body
           form.form-horizontal
             .form-group
               label.col-sm-4.control-label(for="name") Nombre
               .col-sm-8
-                input#name.form-control(type="text", placeholder="Nombre y Apellidos")
+                input#name.form-control(type="text", placeholder="Nombre del Centro")
             .form-group
               label.col-sm-4.control-label(for="email") e-mail
               .col-sm-8
-                input#email.form-control(type="email", placeholder="e-mail de acceso")
+                input#email.form-control(type="email", placeholder="e-mail para comunicaciones")
             .form-group
-              label.col-sm-4.control-label(for="center") Centro
+              label.col-sm-4.control-label(for="address") Dirección
               .col-sm-8
-                select#center.form-control
-                  option(value="alcorcon") Alcorcón
-                  option(value="madrid") Madrid
+                input#address.form-control(type="text", placeholder="Calle y número")
             .form-group
+              // label.col-sm-4.control-label(for="city") Ciudad
+              .col-sm-8.col-sm-offset-4
+                input#city.form-control(type="text", placeholder="Ciudad o Municipio")
+            .form-group
+              // label.col-sm-4.control-label(for="zipcode") C. Postal
+              .col-sm-8.col-sm-offset-4
+                input#zipcode.form-control(type="text", placeholder="Código Postal")
+            .form-group
+              // label.col-sm-4.control-label(for="region") Provincia
+              .col-sm-8.col-sm-offset-4
+                select#center.form-control
+                  option(selected) Álava
+
+            // .form-group
               label.col-sm-4.control-label(for="avatar") Imagen
               .col-sm-8
                 input#avatar.form-control(type="file")
