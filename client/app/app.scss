@@ -246,17 +246,32 @@ input[type="file"].form-control{
   }
 
   .term{
-    font-size: 20px;
+    // color: $brand-amplifon;
+    font-size: 24px;
+    font-weight: 500;
     span{
+      font-weight: 300;
       font-size: 52px;
       color: $brand-amplifon;
     }
   }
+  .type{
+    margin: -10px 0 15px;
+    font-size: 14px;
+    color: #999;
+    // color: $brand-amplifon;
+    span{
+      // font-weight: 500;
+      // color: $brand-amplifon;
+    }
+  }
   .interest, .discount{
-    padding: 5px 0;
+    text-align: left;
+    // padding: 5px 0;
     font-size: 14px;
     span{
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 }
