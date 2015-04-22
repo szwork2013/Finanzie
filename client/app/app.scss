@@ -295,12 +295,17 @@ input[type="file"].form-control{
   }
 }
 
-.progress,.progress-bar{
-  height: 24px;
-}
+.statistics{
+  span{
+    color: $home-primary;
+  }
+  .progress,.progress-bar{
+    height: 24px;
+  }
 
-.progress-bar{
-  padding: 2px 0;
+  .progress-bar{
+    padding: 2px 0;
+  }
 }
 
 

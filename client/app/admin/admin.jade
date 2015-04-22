@@ -1,6 +1,6 @@
 div(ng-include='"components/navbar/navbar.html"')
 
-.container.newform
+.container.newform.statistics
   .row
     .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
       .panel
@@ -9,22 +9,63 @@ div(ng-include='"components/navbar/navbar.html"')
         .panel-body
           .row
             .col-xs-12
-              h4.mbot-15 Tasa de Aprobación
+              h4.mbot-15 Fracciona
+          .row
+            .col-xs-12
+              p
+                b Últimos 3 meses
           .row
             .col-xs-3
-              p Fracciona
+              p Volumen:
+            .col-xs-9
+              p 1.580.200,00€
+          .row
+            .col-xs-3
+              p Aprobación:
             .col-xs-9
               .progress
                 .progress-bar(role="progressbar", aria-valuenow="88", aria-valuemin="0", aria-valuemax="100", style="width:88%;background-color:#66cc33;") 88%
 
           .row
+            .col-xs-12
+              p
+                b Últimos 6 meses
+          .row
+            .col-xs-3
+              p Volumen:
+            .col-xs-9
+              p 3.200.600,00€
+          .row
+            .col-xs-3
+              p Aprobación:
+            .col-xs-9
+              .progress
+                .progress-bar(role="progressbar", aria-valuenow="85", aria-valuemin="0", aria-valuemax="100", style="width:85%;background-color:#66cc33;") 85%
+
+          .row
+            .col-xs-12
+              p
+                b Últimos 12 meses
+          .row
+            .col-xs-3
+              p Volumen:
+            .col-xs-9
+              p 6.010.700,00€
+          .row
+            .col-xs-3
+              p Aprobación:
+            .col-xs-9
+              .progress
+                .progress-bar(role="progressbar", aria-valuenow="84", aria-valuemin="0", aria-valuemax="100", style="width:84%;background-color:#66cc33;") 84%
+
+          // .row
             .col-xs-3
               p SerFin
             .col-xs-9
               .progress
                 .progress-bar(role="progressbar", aria-valuenow="82", aria-valuemin="0", aria-valuemax="100", style="width:82%;background-color:#cc0000;") 82%
 
-          .row
+          // .row
             .col-xs-3
               p Cetelem
             .col-xs-9
