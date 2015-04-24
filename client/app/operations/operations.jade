@@ -22,7 +22,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p 21-04-2015
             .col-md-2
               p.product CON <b>24</b>
-              p 16% TIN - 24 meses
+              p 16% TIN - 24m
             .col-md-2
               p.alright Borrador
             .col-md-2
@@ -52,7 +52,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p 21-04-2015
             .col-md-2
               p.product SIN <b>12</b>
-              p 0% TIN - 12 meses
+              p 0% TIN - 12m
             .col-md-2
               p.alright Pendiente Comercio
             .col-md-2
@@ -80,7 +80,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p 20-04-2015
             .col-md-2
               p.product CON <b>36</b>
-              p 16% TIN - 36 meses
+              p 16% TIN - 36m
             .col-md-2
               p.alright Rechazada
             .col-md-2
@@ -109,7 +109,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p 20-04-2015
             .col-md-2
               p.product SIN <b>12</b>
-              p 0% TIN - 12 meses
+              p 0% TIN - 12m
             .col-md-2
               p.alright Evaluada
               p.alright Fracciona
@@ -142,7 +142,7 @@ div(ng-include='"components/navbar/navbar.html"')
               p 20-04-2015
             .col-md-2
               p.product CON <b>24</b>
-              p 16% TIN - 24 meses
+              p 16% TIN - 24m
             .col-md-2
               p.alright Autorizada
               p.alright Popular SerFin
@@ -153,6 +153,68 @@ div(ng-include='"components/navbar/navbar.html"')
           .row
             .col-xs-7
               p Madrid
+            .col-xs-5
+              // .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-save
+              .click(ng-click="download(record)")
+                span.glyphicon.glyphicon-file
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
+
+    .col-xs-12
+      .panel
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b ES-2015-005430
+              p Marina Álvarez Castro - 87754320A
+            .col-md-2
+              p 19-04-2015
+            .col-md-2
+              p.product HIBRIDO <b>24</b>
+              p 7.99% TIN - 24m
+            .col-md-2
+              p.alright Pendiente Entidad
+              p.alright Cetelem
+            .col-md-2
+              p.alright
+                span 6.800,00€
+        .panel-footer
+          .row
+            .col-xs-7
+              p Móstoles
+            .col-xs-5
+              // .click(ng-click="delete(record)")
+                span.glyphicon.glyphicon-save
+              .click(ng-click="download(record)")
+                span.glyphicon.glyphicon-file
+              .click(ng-click="view(record)")
+                span.glyphicon.glyphicon-eye-open
+
+    .col-xs-12
+      .panel
+        .panel-body
+          .row
+            .col-md-4
+              p
+                b ES-2015-005429
+              p Carlos Agudo Esteve - 65549382D
+            .col-md-2
+              p 19-04-2015
+            .col-md-2
+              p.product HIBRIDO <b>60</b>
+              p 7.99% TIN - 60m
+            .col-md-2
+              p.alright Abonada
+              p.alright Fracciona
+            .col-md-2
+              p.alright
+                span 7.100,00€
+        .panel-footer
+          .row
+            .col-xs-7
+              p Alcorcón
             .col-xs-5
               // .click(ng-click="delete(record)")
                 span.glyphicon.glyphicon-save
