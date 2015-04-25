@@ -32,13 +32,21 @@ div(ng-include='"components/navbar/navbar.html"')
                 p.nomar.alright
                   span eliminar
             hr
+            .form-group.conditions
+              label.col-sm-4.control-label Popular SerFin
+              .col-sm-8
+                p.mtop-7.mbot-0 1.8% comisión
+                p.nomar 0 a 50.000€  -  18 a 80 años
+                p.nomar.alright
+                  span eliminar
+            hr
             .form-group
               label.col-sm-4.control-label(for="entity") Nueva Entidad
               .col-sm-8
                 select#entity.form-control(placeholder="Entidad")
                   option(value="fracciona") Fracciona
-                  option(value="serfin",selected) Popular SerFin
-                  option(value="cetelem") Cetelem
+                  option(value="serfin") Popular SerFin
+                  option(value="cetelem",selected) Cetelem
             .form-group
               label.col-sm-4.control-label(for="commission") Comisión
               .col-sm-8
