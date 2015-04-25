@@ -118,10 +118,10 @@ input[type="file"].form-control{
 
 .searchbar{
   margin-top: 60px;
-  input{
+  input,select{
     margin-top: 10px;
   }
-  input, input:focus{
+  input, select, select:focus, input:focus{
     height: 36px;
   }
 }
@@ -229,6 +229,8 @@ input[type="file"].form-control{
 
   .panel-heading{
     padding: 0 15px;
+    height: auto;
+    overflow: hidden;
   }
 
   .panel-body{
@@ -251,11 +253,12 @@ input[type="file"].form-control{
 
   .term{
     // color: $brand-amplifon;
-    font-size: 24px;
+    margin: 10px 0;
+    font-size: 18px;
     font-weight: 500;
     span{
-      font-weight: 300;
-      font-size: 52px;
+      font-weight: 500;
+      font-size: 24px;
       color: $brand-amplifon;
     }
   }

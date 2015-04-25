@@ -3,151 +3,33 @@ div(ng-include='"components/navbar/navbar.html"')
 .container.searchbar
   .row
     .form-group.col-sm-8.col-md-9.col-lg-10
-      input.form-control(placeholder="Busca entre los productos",ng-model="searchform")
+      select.form-control(ng-model="productType")
+        option(value="SIN") SIN INTERESES
+        option(value="CON") CON INTERESES
+        option(value="HIBRIDO") HÍBRIDO
     .col-sm-4.col-md-3.col-lg-2
       button.btn.btn-block.btn-danger(type="button",ng-click="showNew()") NUEVO PRODUCTO
 
 .container.searchlist.productlist
   .row
 
-    .col-sm-6.col-md-4.col-lg-3(ng-repeat="product in productList track by $index")
+    .col-sm-6.col-md-4.col-lg-3(ng-repeat="product in productList | filter:{ type: productType }")
       .panel
         .panel-heading
-          p.term {{product.type}} <span>{{product.term}}</span>
-          p.type(ng-hide="product.type === 'HIBRIDO'") <span>{{product.term}}</span> meses - <span>{{product.type}}</span> intereses
-          p.type(ng-show="product.type === 'HIBRIDO'") <span>{{product.term}}</span> meses - <span>{{product.type}}
+          .col-xs-6
+            p.term(ng-hide="product.type === 'HIBRIDO'") <span>{{product.type}}</span><br>INTERESES
+            p.term(ng-show="product.type === 'HIBRIDO'") <span>{{product.type}}</span>
+          .col-xs-6
+            p.term <span>{{product.term}}</span><br>MESES
+
+          // p.type(ng-hide="product.type === 'HIBRIDO'") <span>{{product.term}}</span> meses - <span>{{product.type}}</span> intereses
+          // p.type(ng-show="product.type === 'HIBRIDO'") <span>{{product.term}}</span> meses - <span>{{product.type}}
         .panel-body
           .panel-50.left
             p.interest <span>{{product.interest}}%</span> T.I.N.
           .panel-50.right
             p.discount <span>{{product.discount}}%</span> descuento
             p.discount <span>{{product.expenses}}%</span> apertura
-        .panel-footer
-          .row
-            .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
-                span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
-                span.glyphicon.glyphicon-pencil
-
-    // .col-sm-6.col-md-4.col-lg-3
-      .panel
-        .panel-heading
-          p.term CON <span>36</span>
-          p.type <span>36</span> meses - <span>CON</span> intereses
-
-        .panel-body
-          .panel-50.left
-            p.interest <span>4%</span> T.I.N.
-          .panel-50.right
-            p.discount <span>2%</span> descuento
-            p.discount <span>0%</span> apertura
-
-        .panel-footer
-          .row
-            .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
-                span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
-                span.glyphicon.glyphicon-pencil
-
-    // .col-sm-6.col-md-4.col-lg-3
-      .panel
-        .panel-heading
-          p.term CON <span>24</span>
-          p.type <span>24</span> meses - <span>CON</span> intereses
-
-        .panel-body
-          .panel-50.left
-            p.interest <span>5%</span> T.I.N.
-          .panel-50.right
-            p.discount <span>1.5%</span> descuento
-            p.discount <span>0%</span> apertura
-
-        .panel-footer
-          .row
-            .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
-                span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
-                span.glyphicon.glyphicon-pencil
-
-    // .col-sm-6.col-md-4.col-lg-3
-      .panel
-        .panel-heading
-          p.term CON <span>12</span>
-          p.type <span>12</span> meses - <span>CON</span> intereses
-
-        .panel-body
-          .panel-50.left
-            p.interest <span>6%</span> T.I.N.
-          .panel-50.right
-            p.discount <span>1%</span> descuento
-            p.discount <span>0%</span> apertura
-
-        .panel-footer
-          .row
-            .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
-                span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
-                span.glyphicon.glyphicon-pencil
-
-    // .col-sm-6.col-md-4.col-lg-3
-      .panel
-        .panel-heading
-          p.term SIN <span>36</span>
-          p.type <span>36</span> meses - <span>SIN</span> intereses
-
-        .panel-body
-          .panel-50.left
-            p.interest <span>0%</span> T.I.N.
-          .panel-50.right
-            p.discount <span>4%</span> comisión
-            p.discount <span>1%</span> apertura
-
-        .panel-footer
-          .row
-            .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
-                span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
-                span.glyphicon.glyphicon-pencil
-
-    // .col-sm-6.col-md-4.col-lg-3
-      .panel
-        .panel-heading
-          p.term SIN <span>24</span>
-          p.type <span>24</span> meses - <span>SIN</span> intereses
-
-        .panel-body
-          .panel-50.left
-            p.interest <span>0%</span> T.I.N.
-          .panel-50.right
-            p.discount <span>3%</span> comisión
-            p.discount <span>1%</span> apertura
-
-        .panel-footer
-          .row
-            .col-xs-12
-              .click(ng-click="deleteProduct(record.name,record)")
-                span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record);")
-                span.glyphicon.glyphicon-pencil
-
-    // .col-sm-6.col-md-4.col-lg-3
-      .panel
-        .panel-heading
-          p.term SIN <span>12</span>
-          p.type <span>12</span> meses - <span>SIN</span> intereses
-
-        .panel-body
-          .panel-50.left
-            p.interest <span>0%</span> T.I.N.
-          .panel-50.right
-            p.discount <span>2%</span> comisión
-            p.discount <span>1%</span> apertura
-
         .panel-footer
           .row
             .col-xs-12

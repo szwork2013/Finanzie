@@ -5,6 +5,8 @@ angular.module('finanzieApp')
 
     userService.adminPage();
 
+    $scope.productType = 'SIN';
+
     $rootScope.productList = [
       {
         type : 'SIN',
