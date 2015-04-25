@@ -23,14 +23,30 @@ div(ng-include='"components/navbar/navbar.html"')
               label.col-sm-4.control-label(for="interest") Interés
               .col-sm-8
                 input#interest.form-control(type="number", placeholder="Tipo de interés anual (%)")
+            hr
             .form-group
-              label.col-sm-4.control-label(for="commission") Gastos Apertura
+              label.col-sm-4.control-label(for="entity") Nueva Entidad
               .col-sm-8
-                input#commission.form-control(type="number", placeholder="Comisión de apertura (%)")
+                select#entity.form-control(placeholder="Entidad")
+                  option(value="fracciona") Fracciona
+                  option(value="serfin",selected) Popular SerFin
+                  option(value="cetelem") Cetelem
+            .form-group
+              label.col-sm-4.control-label(for="commission") Comisión
+              .col-sm-8
+                input#commission.form-control(type="number", placeholder="Comisión (%)")
+            .form-group
+              label.col-sm-4.control-label(for="expenses") Gastos Apertura
+              .col-sm-8
+                input#expenses.form-control(type="number", placeholder="Gastos de apertura (%)")
             .form-group
               label.col-sm-4.control-label(for="discount") Descuento
               .col-sm-8
                 input#discount.form-control(type="number", placeholder="Descuento (%)")
+            .form-group
+              label.col-sm-4.control-label(for="age") Edad Máx.
+              .col-sm-8
+                input#age.form-control(type="number", placeholder="Edad máxima (años)")
             .form-group
               label.col-sm-4.control-label(for="amount") Importe
               .col-sm-4
@@ -38,6 +54,12 @@ div(ng-include='"components/navbar/navbar.html"')
               .col-sm-4
                 input#amountmax.form-control(type="number", placeholder="Máximo (€)")
             .form-group
+              .col-sm-8.col-sm-offset-4
+                button.btn.btn-default.btn-block(ng-click="addEntity()")
+                  span.glyphicon.glyphicon-plus
+                  |  Añadir Entidad
+
+            // .form-group
               label.col-sm-4.control-label(for="entities") Entidades
               .col-sm-8
                 .checkbox
@@ -49,6 +71,7 @@ div(ng-include='"components/navbar/navbar.html"')
                 .checkbox
                   label Cetelem
                     input(type="checkbox")
+            hr
 
             .form-group.nomar
                     .col-xs-12
