@@ -22,16 +22,15 @@ div(ng-include='"components/navbar/navbar.html"')
             .form-group
               label.col-sm-4.control-label(for="interest") Interés
               .col-sm-8
-                input#interest.form-control(type="number", placeholder="Tipo de interés anual (%)", value="16")
+                input#interest.form-control(type="number", placeholder="Tipo de interés nominal (%)", value="16")
             hr
-            .form-group
-              label.col-sm-4.control-label(for="entities") Entidades
+            .form-group.conditions
+              label.col-sm-4.control-label Fracciona
               .col-sm-8
-                p.mtop-7.mbot-5
-                  b Fracciona
-                p.nomar 16% TIN - 1.5% com.
-                p.nomar 0 - 40.000€
-                p.nomar 18 - 83 años
+                p.mtop-7.mbot-0 16% TIN - 1.5% com.
+                p.nomar 0 a 40.000€  -  18 a 83 años
+                p.nomar.alright
+                  span eliminar
             hr
             .form-group
               label.col-sm-4.control-label(for="entity") Nueva Entidad
