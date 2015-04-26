@@ -28,7 +28,8 @@ div(ng-include='"components/navbar/navbar.html"')
               label.col-sm-4.control-label Fracciona
               .col-sm-8
                 p.mtop-7.mbot-0 1.5% comisión
-                p.nomar 0 a 40.000€  -  18 a 83 años
+                p.nomar 0% gastos apertura
+                p.nomar 0% descuento
                 p.nomar.alright
                   span eliminar
             hr
@@ -36,7 +37,8 @@ div(ng-include='"components/navbar/navbar.html"')
               label.col-sm-4.control-label Popular SerFin
               .col-sm-8
                 p.mtop-7.mbot-0 1.8% comisión
-                p.nomar 0 a 50.000€  -  18 a 80 años
+                p.nomar 0% gastos apertura
+                p.nomar 0% descuento
                 p.nomar.alright
                   span eliminar
             hr
@@ -59,11 +61,11 @@ div(ng-include='"components/navbar/navbar.html"')
               label.col-sm-4.control-label(for="discount") Descuento
               .col-sm-8
                 input#discount.form-control(type="number", placeholder="Descuento (%)")
-            .form-group
+            // .form-group
               label.col-sm-4.control-label(for="age") Edad Máx.
               .col-sm-8
                 input#age.form-control(type="number", placeholder="Edad máxima (años)")
-            .form-group
+            // .form-group
               label.col-sm-4.control-label(for="amount") Importe
               .col-sm-4
                 input#amountmin.form-control(type="number", placeholder="Mínimo (€)")

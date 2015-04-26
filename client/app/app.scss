@@ -188,6 +188,12 @@ input[type="file"].form-control{
     label,span{
       color: $brand-amplifon;
     }
+    span{
+      cursor: pointer;
+    }
+  }
+  .glyphicon{
+    color: #333;
   }
 }
 
