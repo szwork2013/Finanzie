@@ -27,10 +27,11 @@ div(ng-include='"components/navbar/navbar.html"')
         .panel-body
           .panel-50.left
             p.interest <span>{{product.interest}}%</span> T.I.N.
-            p.interest <span>{{product.commission}}%</span> comisión
+            p.interest <span>{{product.discount}}%</span> descuento
           .panel-50.right
-            p.discount <span>{{product.discount}}%</span> descuento
-            p.discount <span>{{product.expenses}}%</span> apertura
+            p.discount <span>{{product.open}}%</span> apertura
+            p.discount <span>{{product.close}}%</span> cancelación
+            p.interest <span>{{product.commission}}%</span> comisión
         .panel-footer
           .row
             .col-xs-12

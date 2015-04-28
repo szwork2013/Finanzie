@@ -14,7 +14,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 1.57,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'SIN',
@@ -22,7 +23,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 2.72,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'SIN',
@@ -30,7 +32,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 3.85,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'SIN',
@@ -38,7 +41,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 4.71,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'SIN',
@@ -46,7 +50,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 6.80,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'SIN',
@@ -54,7 +59,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 8.80,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'SIN',
@@ -62,7 +68,8 @@ angular.module('finanzieApp')
         interest : 0,
         discount : 12.70,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -70,7 +77,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -78,7 +86,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -86,7 +95,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -94,7 +104,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -102,7 +113,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -110,7 +122,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -118,7 +131,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -126,7 +140,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'CON',
@@ -134,7 +149,8 @@ angular.module('finanzieApp')
         interest : 16,
         discount : 0,
         commission : 1.5,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'HIBRIDO',
@@ -142,7 +158,8 @@ angular.module('finanzieApp')
         interest : 7.99,
         discount : 2,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'HIBRIDO',
@@ -150,7 +167,8 @@ angular.module('finanzieApp')
         interest : 7.99,
         discount : 3.55,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'HIBRIDO',
@@ -158,7 +176,8 @@ angular.module('finanzieApp')
         interest : 7.99,
         discount : 4.75,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       },
       {
         type : 'HIBRIDO',
@@ -166,7 +185,8 @@ angular.module('finanzieApp')
         interest : 7.99,
         discount : 6.75,
         commission : 0,
-        expenses: 0
+        open: 0,
+        close: 0.5
       }
     ];
 

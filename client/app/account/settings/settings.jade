@@ -15,7 +15,8 @@ div(ng-include='"components/navbar/navbar.html"')
               .col-sm-8
                 p.mtop-7.mbot-0 50% operaciones
                 p.nomar 18 a 83 años
-                p.nomar 0 a 40.000€
+                p.nomar 120€ a 40.000€
+                p.nomar Salto de mes: día 21
                 p.nomar.alright
                   span  editar
                   |  -
@@ -28,7 +29,8 @@ div(ng-include='"components/navbar/navbar.html"')
               .col-sm-8
                 p.mtop-7.mbot-0 30% operaciones
                 p.nomar 18 a 80 años
-                p.nomar 0 a 50.000€
+                p.nomar 150€ a 50.000€
+                p.nomar Salto de mes: día 22
                 p.nomar.alright
                   span  editar
                   |  -
@@ -56,6 +58,11 @@ div(ng-include='"components/navbar/navbar.html"')
                 input#amountmin.form-control(type="number", placeholder="Mínimo (€)")
               .col-sm-4
                 input#amountmax.form-control(type="number", placeholder="Máximo (€)")
+            .form-group
+              label.col-sm-4.control-label(for="jump") Salto de mes
+              .col-sm-8
+                select#jump.form-control(placeholder="Salto de mes")
+                  option(value="1",selected) Día 1
             .form-group
               .col-sm-8.col-sm-offset-4
                 button.btn.btn-default.btn-block(ng-click="addEntity()")
