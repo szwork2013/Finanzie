@@ -27,10 +27,10 @@ div(ng-include='"components/navbar/navbar.html"')
             .form-group.conditions
               label.col-sm-4.control-label Fracciona
               .col-sm-8
-                p.mtop-7.mbot-0 1.5% comisión
+                p.mtop-7.mbot-0 0% descuento
                 p.nomar 0% gastos apertura
                 p.nomar 0.5% gastos cancelación
-                p.nomar 0% descuento
+                p.nomar 1.5% comisión
                 p.nomar.alright
                   span  editar
                   |  -
@@ -39,10 +39,10 @@ div(ng-include='"components/navbar/navbar.html"')
             .form-group.conditions
               label.col-sm-4.control-label Popular SerFin
               .col-sm-8
-                p.mtop-7.mbot-0 1.8% comisión
+                p.mtop-7.mbot-0 0% descuento
                 p.nomar 0% gastos apertura
                 p.nomar 0.5% gastos cancelación
-                p.nomar 0% descuento
+                p.nomar 1.8% comisión
                 p.nomar.alright
                   span  editar
                   |  -
@@ -56,9 +56,9 @@ div(ng-include='"components/navbar/navbar.html"')
                   option(value="serfin") Popular SerFin
                   option(value="cetelem",selected) Cetelem
             .form-group
-              label.col-sm-4.control-label(for="commission") Comisión
+              label.col-sm-4.control-label(for="discount") Descuento
               .col-sm-8
-                input#commission.form-control(type="number", placeholder="Comisión (%)")
+                input#discount.form-control(type="number", placeholder="Descuento (%)")
             .form-group
               label.col-sm-4.control-label(for="open") Apertura
               .col-sm-8
@@ -68,19 +68,10 @@ div(ng-include='"components/navbar/navbar.html"')
               .col-sm-8
                 input#close.form-control(type="number", placeholder="Gastos de cancelación (%)")
             .form-group
-              label.col-sm-4.control-label(for="discount") Descuento
+              label.col-sm-4.control-label(for="commission") Comisión
               .col-sm-8
-                input#discount.form-control(type="number", placeholder="Descuento (%)")
-            // .form-group
-              label.col-sm-4.control-label(for="age") Edad Máx.
-              .col-sm-8
-                input#age.form-control(type="number", placeholder="Edad máxima (años)")
-            // .form-group
-              label.col-sm-4.control-label(for="amount") Importe
-              .col-sm-4
-                input#amountmin.form-control(type="number", placeholder="Mínimo (€)")
-              .col-sm-4
-                input#amountmax.form-control(type="number", placeholder="Máximo (€)")
+                input#commission.form-control(type="number", placeholder="Comisión (%)")
+
             .form-group
               .col-sm-8.col-sm-offset-4
                 button.btn.btn-default.btn-block(ng-click="addEntity()")
