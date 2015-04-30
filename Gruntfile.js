@@ -1,4 +1,4 @@
-// Generated on 2015-04-20 using generator-angular-fullstack 2.0.13
+// Generated on 2015-03-01 using generator-angular-fullstack 2.0.13
 'use strict';
 
 module.exports = function (grunt) {
@@ -22,9 +22,11 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-plato');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+
 
     // Project settings
     pkg: grunt.file.readJSON('package.json'),
@@ -52,6 +54,9 @@ module.exports = function (grunt) {
     open: {
       server: {
         url: 'http://localhost:<%= express.options.port %>'
+      },
+      plato: {
+        url: './audit/plato/index.html'
       }
     },
     watch: {
@@ -157,6 +162,7 @@ module.exports = function (grunt) {
         ]
       }
     },
+
 
     // Empties folders to start fresh
     clean: {
@@ -265,6 +271,8 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>/public',
+          '<%= yeoman.dist %>/public/app',
+          '<%= yeoman.dist %>/public/i18n',
           '<%= yeoman.dist %>/public/assets/images'
         ],
         // This is so we update image references in our ng-templates
@@ -312,6 +320,7 @@ module.exports = function (grunt) {
       }
     },
 
+
     // Package all the html partials into a single javascript payload
     ngtemplates: {
       options: {
@@ -356,12 +365,15 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.client %>',
           dest: '<%= yeoman.dist %>/public',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,json,jpg}',
             '.htaccess',
             'bower_components/**/*',
-            'assets/images/{,*/}*.{webp}',
-            'assets/fonts/**/*',
-            'index.html'
+            'assets/images/**',
+            'assets/fonts/**',
+            'assets/evil-icons/**/*',
+            'i18n/**',
+            'index.html',
+            'favicon.ico'
           ]
         }, {
           expand: true,
@@ -411,11 +423,11 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'jade',
-        'sass',
+        'sass'
       ],
       test: [
         'jade',
-        'sass',
+        'sass'
       ],
       debug: {
         tasks: [
@@ -428,9 +440,9 @@ module.exports = function (grunt) {
       },
       dist: [
         'jade',
-        'sass',
-        'imagemin',
-        'svgmin'
+        'sass'//,
+        //'imagemin',
+        //'svgmin'
       ]
     },
 
@@ -469,6 +481,10 @@ module.exports = function (grunt) {
       prod: {
         NODE_ENV: 'production'
       },
+      dev: {
+        NODE_ENV: 'development'
+      },
+
       all: localConfig
     },
 
@@ -571,6 +587,13 @@ module.exports = function (grunt) {
         }
       }
     },
+      plato: {
+          all: {
+              files: {
+                  'audit/plato/': ['server/*','client/app/**/*','client/components/**/*']
+              }
+          }
+      }
   });
 
   // Used for delaying livereload until after server has restarted
@@ -589,16 +612,45 @@ module.exports = function (grunt) {
     this.async();
   });
 
+
+
   grunt.registerTask('serve', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'env:all', 'env:prod', 'express:prod', 'wait', 'open', 'express-keepalive']);
+
+    // Para los entornos de PRODUCCIÓN, TEST y DESARROLLO
+    if (target === 'dev') {
+      return grunt.task.run(['build', 'env:all', 'env:dev', 'express:dev', 'wait', 'express-keepalive']);
+    }
+    if (target === 'test') {
+      return grunt.task.run(['build', 'env:all', 'env:test', 'express:test', 'wait', 'express-keepalive']);
+    }
+    if (target === 'prod') {
+      return grunt.task.run(['build', 'env:all', 'env:prod', 'express:prod', 'wait', 'express-keepalive']);
     }
 
+    /*
+    // Para el entorno de DESARROLLO
+    if (target === 'dev') {
+      return grunt.task.run([
+        'clean:server',
+        'env:all',
+        'injector:sass',
+        'concurrent:server',
+        'injector',
+        'wiredep',
+        'autoprefixer',
+        'express:dev',
+        'wait',
+        'express-keepalive'
+      ]);
+    }
+    */
+
+    // Queda terminantemente prohibido debuggear, es de cobardes
     if (target === 'debug') {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:server',
         'injector',
         'wiredep',
@@ -607,17 +659,18 @@ module.exports = function (grunt) {
       ]);
     }
 
+    // Tarea por defecto (LOCAL)
     grunt.task.run([
       'clean:server',
       'env:all',
-      'injector:sass', 
+      'injector:sass',
       'concurrent:server',
       'injector',
       'wiredep',
       'autoprefixer',
       'express:dev',
       'wait',
-      'open',
+      'open:server',
       'watch'
     ]);
   });
@@ -640,7 +693,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:test',
         'injector',
         'autoprefixer',
@@ -653,7 +706,7 @@ module.exports = function (grunt) {
         'clean:server',
         'env:all',
         'env:test',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:test',
         'injector',
         'wiredep',
@@ -671,7 +724,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'injector:sass', 
+    'injector:sass',
     'concurrent:dist',
     'injector',
     'wiredep',
@@ -687,6 +740,11 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
   ]);
+
+  grunt.registerTask('audit', function () {
+      // grunt.task.run(['mochaTest','mocha_istanbul','plato','copy:audit','open:audit','open:audit2']);
+      grunt.task.run(['jshint','plato','open:plato']);
+  });
 
   grunt.registerTask('default', [
     'newer:jshint',
