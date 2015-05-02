@@ -33,8 +33,8 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
         // li(ng-show='isLoggedIn()')
           p.navbar-text Hola {{ getCurrentUser().name }}
 
-        li(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
-          a.action(href='/settings')
+        li(ng-show='isLoggedIn()', ng-class='{active: isActive("/entities")}')
+          a.action(href='/entities')
             span.glyphicon.glyphicon-cog
 
         li(ng-show='isLoggedIn()', ng-class='{active: isActive("/logout")}')

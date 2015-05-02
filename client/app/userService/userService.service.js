@@ -9,7 +9,7 @@ angular.module('finanzieApp')
         Auth.isLoggedInAsync(function(){
           if(Auth.isLoggedIn())
           {
-            document.location.href='/admin';
+            document.location.href='/';
           }
           else
           {
@@ -28,7 +28,7 @@ angular.module('finanzieApp')
       adminPage:function() {
         Auth.isLoggedInAsync(function () {
           if (!Auth.isAdmin()) {
-            document.location.href = '/operations';
+            document.location.href = '/';
           }
         });
       }

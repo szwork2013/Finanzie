@@ -398,13 +398,14 @@ input[type="file"].form-control{
 @import '_mixins.scss';
 @import '_variables.scss';
 @import 'account/login/login.scss';
-@import 'admin/admin.scss';
+@import 'entities/entities.scss';
 @import 'main/main.scss';
 @import 'new-operation/new-operation.scss';
 @import 'new-product/new-product.scss';
 @import 'new-user/new-user.scss';
 @import 'operations/operations.scss';
 @import 'products/products.scss';
+@import 'stats/stats.scss';
 @import 'users/users.scss';
 @import 'modal/modal.scss';
 // endinjector

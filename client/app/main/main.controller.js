@@ -3,7 +3,7 @@
 angular.module('finanzieApp')
   .controller('MainCtrl', function ($scope, $http, $location, userService) {
 
-    userService.publicPage();
+    userService.privatePage();
 
     /*
     $scope.awesomeThings = [];
