@@ -34,9 +34,9 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-7
               p Coslada
             .col-xs-5
-              .click(ng-click="delete(record)")
+              .click(ng-click="delete(record)",title="Eliminar borrador")
                 span.glyphicon.glyphicon-trash
-              .click(ng-click="edit(record)")
+              .click(ng-click="edit(record)",title="Editar operación")
                 span.glyphicon.glyphicon-pencil
               // .click(ng-click="view(record)")
                 span.glyphicon.glyphicon-eye-open
@@ -65,10 +65,10 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-7
               p Madrid
             .col-xs-5
-              .click(ng-click="delete(record)")
+              .click(ng-click="delete(record)",title="Cancelar operación")
                 span.glyphicon.glyphicon-remove
-              .click(ng-click="view(record)")
-                span.glyphicon.glyphicon-eye-open
+              .click(ng-click="edit(record)",title="Editar operación")
+                span.glyphicon.glyphicon-pencil
 
     .col-xs-12
       .panel.denied
@@ -94,9 +94,9 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-7
               p Madrid
             .col-xs-5
-              .click(ng-click="delete(record)")
+              .click(ng-click="archive(record)",title="Archivar operación")
                 span.glyphicon.glyphicon-save
-              .click(ng-click="view(record)")
+              .click(ng-click="view(record)",title="Ver detalle")
                 span.glyphicon.glyphicon-eye-open
 
 
@@ -128,10 +128,10 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-5
               // .click(ng-click="delete(record)")
                 span.glyphicon.glyphicon-save
-              .click(ng-click="download(record)")
-                span.glyphicon.glyphicon-file
-              .click(ng-click="view(record)")
-                span.glyphicon.glyphicon-eye-open
+              .click(ng-click="delete(record)",title="Cancelar operación")
+                span.glyphicon.glyphicon-remove
+              .click(ng-click="edit(record)",title="Editar operación")
+                span.glyphicon.glyphicon-pencil
 
 
     .col-xs-12
@@ -161,10 +161,12 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-5
               // .click(ng-click="delete(record)")
                 span.glyphicon.glyphicon-save
-              .click(ng-click="download(record)")
+              .click(ng-click="delete(record)",title="Cancelar operación")
+                span.glyphicon.glyphicon-remove
+              .click(ng-click="download(record)",title="Descargar contrato")
                 span.glyphicon.glyphicon-file
-              .click(ng-click="view(record)")
-                span.glyphicon.glyphicon-eye-open
+              .click(ng-click="edit(record)",title="Editar operación")
+                span.glyphicon.glyphicon-pencil
 
     .col-xs-12
       .panel
@@ -193,10 +195,10 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-5
               // .click(ng-click="delete(record)")
                 span.glyphicon.glyphicon-save
-              .click(ng-click="download(record)")
-                span.glyphicon.glyphicon-file
-              .click(ng-click="view(record)")
-                span.glyphicon.glyphicon-eye-open
+              .click(ng-click="delete(record)",title="Cancelar operación")
+                span.glyphicon.glyphicon-remove
+              .click(ng-click="edit(record)",title="Editar operación")
+                span.glyphicon.glyphicon-pencil
 
     .col-xs-12
       .panel
@@ -223,9 +225,9 @@ div(ng-include='"components/navbar/navbar.html"')
             .col-xs-7
               p Alcorcón
             .col-xs-5
-              // .click(ng-click="delete(record)")
+              .click(ng-click="archive(record)",title="Archivar operación")
                 span.glyphicon.glyphicon-save
-              .click(ng-click="download(record)")
+              .click(ng-click="download(record)",title="Descargar contrato")
                 span.glyphicon.glyphicon-file
-              .click(ng-click="view(record)")
+              .click(ng-click="view(record)",title="Ver detalle")
                 span.glyphicon.glyphicon-eye-open

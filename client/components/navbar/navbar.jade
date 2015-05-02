@@ -13,6 +13,10 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
 
     div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
       ul.nav.navbar-nav
+        li(ng-show='isLoggedIn()', ng-class='{active: isActive("/new-operation")}')
+          a.action(href='/new-operation')
+            .btn.btn-danger.btn-sm NUEVA OPERACIÓN
+
         li(ng-show="isLoggedIn()", ng-class='{active: isActive("/operations")}')
           a(ng-href='/operations') Operaciones
 
@@ -33,7 +37,7 @@ div.navbar.navbar-static-top(ng-controller='NavbarCtrl')
         // li(ng-show='isLoggedIn()')
           p.navbar-text Hola {{ getCurrentUser().name }}
 
-        li(ng-show='isLoggedIn()', ng-class='{active: isActive("/entities")}')
+        // li(ng-show='isLoggedIn()', ng-class='{active: isActive("/entities")}')
           a.action(href='/entities')
             span.glyphicon.glyphicon-cog
 

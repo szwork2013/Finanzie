@@ -45,7 +45,15 @@ div(ng-include='"components/navbar/navbar.html"')
               .col-sm-8
                 input#code.form-control(type="text", placeholder="Código de la entidad")
             .form-group
-              label.col-sm-4.control-label(for="assigned") Asignación
+              label.col-sm-4.control-label(for="contact") Contacto
+              .col-sm-8
+                input#contact.form-control(type="text", placeholder="Persona de contacto")
+            .form-group
+              label.col-sm-4.control-label(for="email") e-mail
+              .col-sm-8
+                input#email.form-control(type="email", placeholder="e-mail envío documentación")
+            .form-group
+              label.col-sm-4.control-label(for="assigned") Peso
               .col-sm-8
                 input#assigned.form-control(type="number", placeholder="Porcentaje de operaciones asignadas")
             .form-group
