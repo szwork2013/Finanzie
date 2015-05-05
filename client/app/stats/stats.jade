@@ -5,69 +5,219 @@ div(ng-include='"components/navbar/navbar.html"')
     .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
       .panel
         .panel-heading
-          h3 Estadísticas
+          h3 Etructura de Productos
         .panel-body
+          .row.mtop-15
+            .col-xs-3.col-xs-offset-6
+              p.alright
+                b VOLUMEN
+            .col-xs-3
+              p.alright
+                b COSTES FIN.
+
           .row
-            .col-xs-12
-              h4.mbot-15 Fracciona
+            .col-xs-6
+              p.product <span>CON</span> Intereses - <span>24</span> Meses
+            .col-xs-3
+              p.alright 320.600,00€
+            .col-xs-3
+              p.alright 1.85%
+
           .row
-            .col-xs-12
+            .col-xs-6
+              p.product <span>SIN</span> Intereses - <span>12</span> Meses
+            .col-xs-3
+              p.alright 250.400,00€
+            .col-xs-3
+              p.alright 4.20%
+
+          .row
+            .col-xs-6
+              p.product <span>CON</span> Intereses - <span>12</span> Meses
+            .col-xs-3
+              p.alright 245.800,00€
+            .col-xs-3
+              p.alright 3.05%
+
+          .row
+            .col-xs-6
+              p.product <span>SIN</span> Intereses - <span>36</span> Meses
+            .col-xs-3
+              p.alright 223.100,00€
+            .col-xs-3
+              p.alright 4.12%
+
+          .row
+            .col-xs-6
+              p.product <span>CON</span> Intereses - <span>6</span> Meses
+            .col-xs-3
+              p.alright 183.500,00€
+            .col-xs-3
+              p.alright 2.10%
+
+          .row
+            .col-xs-6
+              p.product <span>SIN</span> Intereses - <span>18</span> Meses
+            .col-xs-3
+              p.alright 175.900,00€
+            .col-xs-3
+              p.alright 3.24%
+
+          .row
+            .col-xs-6
+              p.product <span>SIN</span> Intereses - <span>6</span> Meses
+            .col-xs-3
+              p.alright 165.200,00€
+            .col-xs-3
+              p.alright 3.02%
+
+      .panel
+        .panel-heading
+          h3 Estadísticas Entidades
+        .panel-body
+          .row.mtop-15
+            .col-xs-3.col-xs-offset-3
+              p.alright
+                b VOLUMEN
+            .col-xs-3
+              p.alright
+                b PESO REAL
+            .col-xs-3
+              p.alright
+                b COSTES FIN.
+
+          .row
+            .col-xs-3
               p
-                b Últimos 3 meses
+                b Fracciona
+            .col-xs-3
+              p.alright 600.500,00€
+            .col-xs-3
+              p.alright 49.62%
+            .col-xs-3
+              p.alright 2.45%
+
           .row
             .col-xs-3
-              p Volumen:
-            .col-xs-9
-              p 1.580.200,00€
+              p
+                b Popular SerFin
+            .col-xs-3
+              p.alright 356.200,00€
+            .col-xs-3
+              p.alright 29.43%
+            .col-xs-3
+              p.alright 2.62%
+
           .row
             .col-xs-3
-              p Aprobación:
-            .col-xs-9
-              .progress
-                .progress-bar(role="progressbar", aria-valuenow="88", aria-valuemin="0", aria-valuemax="100", style="width:88%;background-color:#66cc33;") 88%
+              p
+                b Cetelem
+            .col-xs-3
+              p.alright 253.600,00€
+            .col-xs-3
+              p.alright 20.95%
+            .col-xs-3
+              p.alright 2.80%
 
           .row
             .col-xs-12
+              p.alright
+                i Datos de los últimos 30 días
+
+      .panel
+        .panel-heading
+          h3 Detalle por Entidad
+        .panel-body
+          .row.mtop-15
+            .col-xs-12.form-group
+              select.form-control
+                option Fracciona
+                option Popular SerFin
+                option Cetelem
+
+          .row.mtop-15
+            .col-xs-5
               p
-                b Últimos 6 meses
-          .row
-            .col-xs-3
-              p Volumen:
-            .col-xs-9
-              p 3.200.600,00€
-          .row
-            .col-xs-3
-              p Aprobación:
-            .col-xs-9
-              .progress
-                .progress-bar(role="progressbar", aria-valuenow="85", aria-valuemin="0", aria-valuemax="100", style="width:85%;background-color:#66cc33;") 85%
+                b Tasa de Recurso a Crédito
+            .col-xs-4
+              p 64%
 
           .row
-            .col-xs-12
+            .col-xs-5
               p
-                b Últimos 12 meses
+                b Tiempo Medio de Estudio
+            .col-xs-4
+              p 46 horas
+
+          .row
+            .col-xs-5
+              p
+                b Tiempo Medio de Pago
+            .col-xs-4
+              p 74 horas
+
+          .row.mtop-15
+            .col-xs-3.col-xs-offset-3
+              p.alright
+                b VOLUMEN
+            .col-xs-3
+              p.alright
+                b APROBACIÓN
+            .col-xs-3
+              p.alright
+                b COSTES FIN.
+
           .row
             .col-xs-3
-              p Volumen:
-            .col-xs-9
-              p 6.010.700,00€
+              p
+                b 7 días
+            .col-xs-3
+              p.alright 145.800,00€
+            .col-xs-3
+              p.alright 88%
+            .col-xs-3
+              p.alright 2.32%
+
           .row
             .col-xs-3
-              p Aprobación:
-            .col-xs-9
-              .progress
-                .progress-bar(role="progressbar", aria-valuenow="84", aria-valuemin="0", aria-valuemax="100", style="width:84%;background-color:#66cc33;") 84%
-
-          // .row
+              p
+                b 30 días
             .col-xs-3
-              p SerFin
-            .col-xs-9
-              .progress
-                .progress-bar(role="progressbar", aria-valuenow="82", aria-valuemin="0", aria-valuemax="100", style="width:82%;background-color:#cc0000;") 82%
-
-          // .row
+              p.alright 600.500,00€
             .col-xs-3
-              p Cetelem
-            .col-xs-9
-              .progress
-                .progress-bar(role="progressbar", aria-valuenow="84", aria-valuemin="0", aria-valuemax="100", style="width:84%;background-color:#11aa55;") 84%
+              p.alright 87%
+            .col-xs-3
+              p.alright 2.45%
+
+          .row
+            .col-xs-3
+              p
+                b 3 meses
+            .col-xs-3
+              p.alright 1.580.200,00€
+            .col-xs-3
+              p.alright 88%
+            .col-xs-3
+              p.alright 2.20%
+
+          .row
+            .col-xs-3
+              p
+                b 6 meses
+            .col-xs-3
+              p.alright 3.200.600,00€
+            .col-xs-3
+              p.alright 85%
+            .col-xs-3
+              p.alright 2.16%
+
+          .row
+            .col-xs-3
+              p
+                b 12 meses
+            .col-xs-3
+              p.alright 6.010.700,00€
+            .col-xs-3
+              p.alright 84%
+            .col-xs-3
+              p.alright 2.27%
