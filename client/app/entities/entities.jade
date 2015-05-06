@@ -5,7 +5,7 @@ div(ng-include='"components/navbar/navbar.html"')
     .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
       .panel
         .panel-heading
-          h3 Configuración
+          h3 Configuración Entidades
         .panel-body
           form.form-horizontal
             .form-group.conditions
@@ -13,10 +13,14 @@ div(ng-include='"components/navbar/navbar.html"')
                 label.control-label Fracciona
                 p.code FRACCIONA
               .col-sm-8
-                p.mtop-7.mbot-0 40% operaciones
-                p.nomar 18 a 83 años
-                p.nomar 120€ a 40.000€
+                p.mtop-7.mbot-0 40% peso operaciones
                 p.nomar Salto de mes: día 21
+                p.nomar 18 a 83 años (edad solicitante)
+                p.nomar 12€/mes cuota mínima
+                p.nomar 3-36 meses (Plazo SIN)
+                p.nomar 3-60 meses (Plazo CON)
+                // p.nomar 120€ a 40.000€
+
                 p.nomar.alright
                   span  editar
                   |  -
@@ -27,10 +31,14 @@ div(ng-include='"components/navbar/navbar.html"')
                 label.control-label Popular SerFin
                 p.code SERFIN
               .col-sm-8
-                p.mtop-7.mbot-0 30% operaciones
-                p.nomar 18 a 80 años
-                p.nomar 150€ a 50.000€
+                p.mtop-7.mbot-0 30% peso operaciones
                 p.nomar Salto de mes: día 22
+                p.nomar 18 a 80 años (edad solicitante)
+                p.nomar 15€/mes cuota mínima
+                p.nomar 3-36 meses (Plazo SIN)
+                p.nomar 3-60 meses (Plazo CON)
+                // p.nomar 150€ a 50.000€
+
                 p.nomar.alright
                   span  editar
                   |  -
@@ -56,21 +64,69 @@ div(ng-include='"components/navbar/navbar.html"')
               label.col-sm-4.control-label(for="assigned") Peso
               .col-sm-8
                 input#assigned.form-control(type="number", placeholder="Porcentaje de operaciones asignadas")
+
             .form-group
-              label.col-sm-4.control-label(for="age") Edad Máx.
-              .col-sm-8
-                input#age.form-control(type="number", placeholder="Edad máxima del cliente (años)")
-            .form-group
-              label.col-sm-4.control-label(for="amount") Importe
-              .col-sm-4
-                input#amountmin.form-control(type="number", placeholder="Mínimo (€)")
-              .col-sm-4
-                input#amountmax.form-control(type="number", placeholder="Máximo (€)")
+              .col-sm-8.col-sm-offset-4.mtop-15
+                label Políticas de la Entidad
             .form-group
               label.col-sm-4.control-label(for="jump") Salto de mes
               .col-sm-8
                 select#jump.form-control(placeholder="Salto de mes")
                   option(value="1",selected) Día 1
+            .form-group
+              label.col-sm-4.control-label(for="agemin") Edad mín.
+              .col-sm-8
+                input#agemin.form-control(type="number", placeholder="Edad mínima solicitante(años)")
+            .form-group
+              label.col-sm-4.control-label(for="agemax") Edad máx.
+              .col-sm-8
+                input#agemax.form-control(type="number", placeholder="Edad solicitante + plazo operación (años)")
+            .form-group
+              .col-sm-8.col-sm-offset-4.mtop-15
+                label Cuotas
+            .form-group
+              label.col-sm-4.control-label(for="minquota") Mensualidad Mín.
+              .col-sm-8
+                input#minquota.form-control(type="number", placeholder="Cuota mensual mínima por operación (€)")
+            .form-group
+              label.col-sm-4.control-label(for="minterm") Plazo Mín.
+              .col-sm-8
+                input#minterm.form-control(type="number", placeholder="Plazo mínimo (meses)")
+            .form-group
+              label.col-sm-4.control-label(for="maxtermsin") Plazo Máx. SIN
+              .col-sm-8
+                input#maxtermsin.form-control(type="number", placeholder="Plazo maximo sin intereses (meses)")
+            .form-group
+              label.col-sm-4.control-label(for="maxtermcon") Plazo Máx. CON
+              .col-sm-8
+                input#maxtermcon.form-control(type="number", placeholder="Plazo maximo con intereses (meses)")
+            .form-group
+              .col-sm-8.col-sm-offset-4.mtop-15
+                label Ingresos mínimos familiares
+            .form-group
+              label.col-sm-4.control-label(for="income") Pensionista
+              .col-sm-8
+                input#income.form-control(type="number", placeholder="Ingreso mínimo pensionista (€)")
+            .form-group
+              label.col-sm-4.control-label(for="income") Jubilado
+              .col-sm-8
+                input#income.form-control(type="number", placeholder="Ingreso mínimo jubilado (€)")
+            .form-group
+              label.col-sm-4.control-label(for="income") Asalariado
+              .col-sm-8
+                input#income.form-control(type="number", placeholder="Ingreso mínimo asalariado (€)")
+            .form-group
+              label.col-sm-4.control-label(for="income") Autónomo
+              .col-sm-8
+                input#income.form-control(type="number", placeholder="Ingreso mínimo autónomo (€)")
+
+            // .form-group
+              label.col-sm-4.control-label(for="amount") Importe
+              .col-sm-4
+                input#amountmin.form-control(type="number", placeholder="Mínimo (€)")
+              .col-sm-4
+                input#amountmax.form-control(type="number", placeholder="Máximo (€)")
+
             .form-group
               .col-sm-8.col-sm-offset-4
                 button.btn.btn-default.btn-block(ng-click="addEntity()")
